@@ -16,6 +16,13 @@ const TabsLayout = () => {
        }}
 
        />
+      <Tabs.Screen
+      name="checklists/index"
+      options={{ 
+        title: "Thuis Veilig",
+        tabBarLabel: "Checklists",
+       }}
+        />
     </Tabs>
   );
 };

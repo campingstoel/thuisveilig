@@ -1,11 +1,14 @@
 import { Link } from 'expo-router';
 import { View } from 'react-native';
+import Header from '../../../../components/atoms/Header';
+import headerStyles from '../../../../components/styles/headerStyles';
 
 
 const Home = () => {
     return (
         <View>
-        <Link href="/home">Test</Link>
+        <Header text="Thuis Veilig" style={[headerStyles.test]}  />
+        
         </View>
     );
 }

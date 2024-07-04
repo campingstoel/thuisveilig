@@ -21,14 +21,13 @@ const RootLayout = () => {
   }
   , [loaded, initialized]);
 
-  // router replace if user is logged in
   useEffect(() => {
-    if(isLoggedIn) { router.replace("(auth)/(tabs)");
+    if(initialized && isLoggedIn) { router.replace("(auth)/(tabs)");
     }
     else { router.replace("(public)/login");
     }
   }
-  , [isLoggedIn]);
+  , [initialized, isLoggedIn]);
 
 
   return (

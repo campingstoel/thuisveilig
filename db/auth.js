@@ -11,6 +11,6 @@ import { collection, addDoc, doc, getDoc, setDoc } from "firebase/firestore";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 export const AuthStore = new Store({
-  isLoggedIn: false,
-  initialized: false,
+  isLoggedIn: true,
+  initialized: true,
 });
