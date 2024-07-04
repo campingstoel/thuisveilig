@@ -6,7 +6,6 @@ Thuis Veilig is an app concept that aims towards a safer experience in emergency
 ## Authors
 
 - [@campingstoel](https://www.github.com/campingstoel)
-- [@manonwelmers](https://www.github.com/campingstoel)
 - [@maureenvl](https://www.github.com/maureenvl)
 
 ## Roadmap
