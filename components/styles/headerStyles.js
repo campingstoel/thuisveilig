@@ -2,9 +2,10 @@ import { StyleSheet } from "react-native";
 
 const headerStyles = StyleSheet.create({
 
-    test : {
-        color: "black",
+    header : {
+        fontFamily: "Poppins",
     },
+
 });
 
 export default headerStyles;

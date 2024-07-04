@@ -9,6 +9,13 @@ import * as SplashScreen from 'expo-splash-screen';
 const RootLayout = () => {
   const {initialized, isLoggedIn} = AuthStore.useState();
   const [loaded, error] = useFonts({
+    'Poppins': require('../assets/Poppins-Regular.ttf'),
+    'Poppins-Bold': require('../assets/Poppins-Bold.ttf'),
+    'Poppins-SemiBold': require('../assets/Poppins-SemiBold.ttf'),
+    'Poppins-Medium': require('../assets/Poppins-Medium.ttf'),
+    'Poppins-Light': require('../assets/Poppins-Light.ttf'),
+    'Poppins-MediumItalic': require('../assets/Poppins-MediumItalic.ttf'),
+
   });
 
   useEffect(() => {
@@ -22,12 +29,12 @@ const RootLayout = () => {
   , [loaded, initialized]);
 
   useEffect(() => {
-    if(initialized && isLoggedIn) { router.replace("(auth)/(tabs)");
+    if(initialized && isLoggedIn && loaded) { router.replace("(auth)/(tabs)");
     }
     else { router.replace("(public)/login");
     }
   }
-  , [initialized, isLoggedIn]);
+  , [initialized, isLoggedIn, loaded]);
 
 
   return (
