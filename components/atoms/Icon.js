@@ -8,7 +8,9 @@ const Icon = (props) => {
         <View style={[props.active ? iconStyles.activeBG : iconStyles.inactiveBG, index.spaceBetween, index.row, index.alignCenter]}>
             {props.textFirst ? 
             <Header text={props.text} style={[props.active ? iconStyles.activeText : iconStyles.inactiveText]}/> : null}
-        <Ionicons name={props.name} size={props.size} color={props.color} />
+        <Ionicons name={props.name} size={props.size} color={
+            props.active ? 'white' : iconStyles.inactiveText
+        } />
         {props.iconFirst ? <Header text={props.text} style={[props.active ? index.activeText : index.inactiveText]}/> : null}
         </View>
     );

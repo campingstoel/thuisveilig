@@ -5,12 +5,12 @@ import headerStyles from '../../../../components/styles/headerStyles';
 import { useFocusEffect } from 'expo-router';
 import React from 'react';
 import { TabFocusContext } from '../../../../context/NavigationProvider';
-const Home = () => {
+const Settings = () => {
     const { setFocusedTab } = React.useContext(TabFocusContext);
     
     useFocusEffect(
         React.useCallback(() => {
-            setFocusedTab('Home');
+            setFocusedTab('Settings');
             return () => {
                 console.log('Unfocused');
             };
@@ -24,4 +24,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Settings;
